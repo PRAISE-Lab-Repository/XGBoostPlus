@@ -1,0 +1,29 @@
+This zip file contains the code to run our experiments described in our paper. 
+
+The /data folder contains the the raw data of both the UCI datasets and synthetic datasets. The folder also contains the code to
+retrieve and preprocess the code before training the model.
+
+The /models folder contains the code for all four of the models in our experiment, even our proposed model XGBoost+.
+
+To run any of the experiments, please run the following command:
+
+`python3 main.py {modelName} {datasetName}`
+
+Options for {modelName} (case sensitive):
+- SVM
+- SVM+
+- XGB
+- XGB+
+
+Options for {datasetName} (caseSensitive):
+- wine
+- abalone
+- cancer
+- diabetes
+- synth1
+- synth2
+- synth3
+- synth4
+
+The command will run the specified model using the specified dataset over 50 independent trials and produce the
+indivdual trial results and averaged results as well. 
